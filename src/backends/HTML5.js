@@ -552,7 +552,12 @@ class HTML5Backend {
     this.actions.hover(dropTargetIds, {
       clientOffset: getEventClientOffset(e)
     });
-    this.actions.drop();
+    this.actions.drop({
+        altKey: e.altKey,
+        ctrlKey: e.ctrlKey,
+        metaKey: e.metaKey,
+        shiftKey: e.shiftKey
+    });
 
     if (this.isDraggingNativeItem()) {
       this.endDragNativeItem();

@@ -60,12 +60,12 @@ export default function createTargetFactory(spec) {
       spec.hover(this.props, this.monitor, this.component);
     }
 
-    drop() {
+    drop(monitor, targetId, meta) {
       if (!spec.drop) {
         return;
       }
 
-      const dropResult = spec.drop(this.props, this.monitor, this.component);
+      const dropResult = spec.drop(this.props, this.monitor, this.component, meta);
       if (process.env.NODE_ENV !== 'production') {
         invariant(
           typeof dropResult === 'undefined' ||
