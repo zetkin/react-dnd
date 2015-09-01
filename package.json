@@ -38,7 +38,7 @@
   "homepage": "https://github.com/gaearon/react-dnd",
   "dependencies": {
     "disposables": "^1.0.1",
-    "dnd-core": "^1.1.0",
+    "dnd-core": "git://github.com/zetkin/dnd-core.git#gitinstall",
     "invariant": "^2.1.0",
     "lodash": "^3.1.0"
   },
